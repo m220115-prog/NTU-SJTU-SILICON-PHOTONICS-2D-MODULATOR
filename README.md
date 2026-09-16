@@ -1,70 +1,77 @@
-# NTU-SJTU-JOINT-PROGRAM-ZHANG-JINMING
+# NTU-SJTU-SILICON-PHOTONICS-2D-MODULATOR
 # Optoelectronic Characterization of 2D Material-Integrated Silicon Photonic Devices
 
-This repository documents the joint NTU-SJTU research project focused on the characterization of novel 2D material-based optical modulators. The silicon photonic chips, featuring micro-ring resonators (MRRs) and photonic crystals, were fabricated at NTU. My primary role at SJTU was to lead the entire testing workflow: from designing the characterization protocol and building the test setup, to analyzing the final device performance and troubleshooting experimental failures.
+This repository documents the joint NTU-SJTU research project focused on characterizing novel 2D material-based optical modulators. The silicon photonic chips, featuring micro-ring resonators (MRRs) and photonic crystals, were fabricated at NTU. My primary role at SJTU was to design the testing protocols, build the characterization setup, execute the measurements, and perform deep failure analysis.
 
-The devices under test are capacitor-like structures where 2D materials (Graphene, Black Phosphorus, or NbOI₂) are integrated as active channels on top of a ferroelectric dielectric (CIPS) and a bottom electrode.
+The devices are designed as capacitor-like structures integrated directly over the silicon waveguides. The stack consists of a bottom electrode, a 2D material active channel (Graphene, Black Phosphorus, or NbOI₂), a ferroelectric dielectric layer (CIPS), and a top gate electrode.
 
-<!-- 💡 操作提示：这里放您提到的器件结构示意图 -->
-<img width="500" alt="Device Schematic" src="这里放器件示意图的链接" />
+<!-- 💡 操作提示：这里放您的 Graphene/CIPS 结构图 -->
+<img width="500" alt="Device Schematic" src="这里放您的结构图链接" />
 
-*Figure 1: Schematic of the 2D material-integrated photonic device, forming a capacitor structure over a silicon waveguide.*
+*Figure 1: Schematic of the 2D material-integrated photonic device, illustrating the capacitor-like structure (Bottom Electrode / 2D Channel / CIPS / Top Gate) over a silicon waveguide.*
 
 ---
 
 ### Step 1: Experimental Setup & Test Protocol Design
 
-To perform high-fidelity optoelectronic characterization, a custom four-probe station was built and integrated with external equipment.
+To perform high-fidelity optoelectronic characterization, I built a custom four-probe station integrated with external optical and electrical equipment.
 
-*   **Testbed Construction**: The setup utilizes four probes: two for optical I/O (fiber-to-chip coupling) and two for applying electrical pulses to the device electrodes. The station is connected to a spectrometer, a tunable pulse voltage source, an oscilloscope, and a backup current source. The voltage source was chosen for active testing due to its faster switching speed, which is critical for applying short pulses.
-*   **Test Protocol Design**: I independently designed the entire characterization protocol, covering everything from initial passive validation to active-duty cycling and endurance tests. The test plan (detailed in the original [planning slides](这里可以链接您的PPT文件)) was structured to systematically quantify key performance metrics like resonance shift (Δλ₀), Q-factor, and non-volatile memory effects based on the underlying device physics, where the change in refractive index (Δn) is proportional to the square of the ferroelectric polarization (Δn ∝ P²).
+**Testbed Construction:** The setup utilizes four probes: two optical probes for fiber-to-chip light coupling (input/output) and two electrical probes for applying pulses to the device electrodes. The station is connected to a spectrometer, a tunable pulse voltage source, an oscilloscope, and a backup current source. I selected the voltage source for active testing not only for its fast switching speed (critical for generating short pulses) but also for its ability to provide larger driving voltages (up to 10V) compared to the current source.
 
-<!-- 💡 操作提示：这里放您测试平台（“搭台子”）的照片 -->
+**Test Protocol Design:** I independently designed the entire characterization sequence. Instead of simple sweeps, the core of the active testing was designed around cyclic pulse measurements. The protocol involved applying a specific programming voltage pulse to polarize the ferroelectric CIPS layer, followed by a reading phase to record the transmission spectrum. By extracting the resonance wavelength shift (Δλ₀) and changes in the peak intensity and Q-factor over multiple cycles, the goal was to quantify the non-volatile memory effects. The physical mechanism behind this design relies on the principle that the change in the effective refractive index (Δn) is proportional to the square of the ferroelectric polarization (Δn ∝ P²).
+
+<!-- 💡 操作提示：这里放您搭台子的照片 -->
 <img width="500" alt="Test Setup" src="这里放测试平台照片的链接" />
 
 *Figure 2: The custom-built four-probe optoelectronic characterization setup.*
 
 ---
 
-### Step 2: Device Characterization & Troubleshooting
+### Step 2: Passive Screening & Structural Integrity
 
-The testing workflow was executed in several phases, encountering and resolving critical issues along the way.
+Before active testing, I performed passive spectral measurements on all devices to check their basic optical functionality post-transfer. 
 
-#### 2.1. Initial Passive Screening
+The screening criteria went beyond simply finding a resonance peak. I specifically checked if the **number of peaks** and the **Free Spectral Range (FSR, the distance between peaks)** matched the theoretical design. 
 
-Before active testing, a passive spectral measurement was performed on all devices to check for basic functionality post-transfer. The key was to observe the transmission spectrum: a preserved resonance peak, even if shifted or broadened, indicated a working device.
-
-#### 2.2. Troubleshooting: Material & Process-Induced Failures
-
-During the initial testing round, I identified two major failure modes:
-
-*   **Problem 1: Material Degradation.** The initial plan involved soaking the chips in acetone to remove the PMMA protective layer from the NbOI₂ flakes. However, this process completely destroyed the other two materials (Black Phosphorus and Graphene), which were not PMMA-coated and are highly sensitive to solvents.
-*   **Problem 2: Contamination & Waveguide Blockage.** Many devices showed poor or no optical transmission. Microscopic inspection revealed that this was caused by residue from the dry transfer process, which physically blocked the optical path of the waveguides. Pressing too hard during transfer also sometimes damaged the underlying fragile photonic structures.
-
-<!-- 💡 操作提示：这里可以放一张“很脏”或“压坏了”的显微镜照片 -->
-<img width="400" alt="Device Failure" src="这里放一张失效器件的图片链接" />
-
-*Figure 3: Optical micrograph of a failed device, showing transfer-induced contamination obscuring the waveguide.*
-
-#### 2.3. Corrective Action & Process Feedback
-
-Based on the failure analysis, I provided the following feedback to the fabrication team at NTU:
-
-*   **Process Refinement**: To address the contamination, a plasma cleaning step was introduced. However, even after prolonged plasma exposure, some residues remained, likely due to their polymeric nature being resistant to the specific plasma chemistry used. This led to the decision to ship the problematic batch of chips back to NTU for more advanced cleaning and re-fabrication. This iterative troubleshooting loop was crucial for improving the device yield.
-
-<!-- 💡 操作提示：这里可以放一张等离子清洗设备（Plasma Cleaner）的照片 -->
-<img width="400" alt="Plasma Cleaner" src="这里放Plasma设备的照片链接" />
-
-*Figure 4: The PIE Scientific Tergeo Plasma Cleaner used in an attempt to remove transfer residues.*
+If the peaks were completely missing, or if the FSR was severely distorted, it indicated that light was no longer propagating through the designed optical path. Through microscopic inspection, I identified several root causes for these passive failures:
+1. **Severe Contamination:** Heavy residues from the dry transfer process completely blocked the optical pathways.
+2. **Mechanical Damage:** The excessive mechanical pressure applied during the dry transfer process physically crushed the fragile silicon photonic structures (MRRs and waveguides).
 
 ---
 
-### Step 3: Active Device Performance (Non-Volatile Memory)
+### Step 3: Active Testing & Sequential Failures
 
-For the successfully fabricated devices, I proceeded with active testing to validate the non-volatile memory effect. By applying voltage pulses to polarize the ferroelectric CIPS layer, I observed a clear and repeatable shift in the spectral resonance, confirming the non-volatile modulation of the device's optical properties. The data below shows a typical result from a working device, demonstrating its potential as an optical memristor.
+For the devices that survived the passive screening, I proceeded with the active cyclic testing. However, the initial testing round revealed a series of sequential failures.
 
-<!-- 💡 操作提示：从您PPT里挑选最能代表“有源测试成功”的数据图，比如光谱移动或Q因子变化图 -->
-<img width="500" alt="Active Modulation" src="这里放一张有源测试成功的数据图链接" />
+**Round 1: Graphene and Black Phosphorus (BP) Devices**
+I first applied the active testing protocol to the Graphene and BP devices. Both sets of devices failed to show the expected non-volatile spectral modulation. The data revealed a complete absence of the designed memory window.
 
-*Figure 5: Non-volatile spectral shift in a working device. The resonance peak (transmission dip) remains at different wavelengths after applying SET and RESET voltage pulses, demonstrating the memory effect.*
+<!-- 💡 操作提示：放 Graphene 和 BP 有源测试失败的图 -->
+<img width="500" alt="Graphene and BP Active Failure" src="这里放 Graphene 和 BP 失败的数据图链接" />
+*Figure 3: Active testing results for Graphene and BP devices, showing a complete lack of expected ferroelectric memory modulation.*
+
+**Process Intervention: PMMA Removal**
+Because the chips were shipped from NTU in a vacuum with a protective PMMA layer specifically coating the NbOI₂ flakes, I had to soak the entire chip in acetone to strip the PMMA before testing the NbOI₂ devices. Unfortunately, this necessary solvent soaking process completely destroyed the remaining Graphene and BP structures, as they lacked protective coatings and were highly sensitive to solvents.
+
+**Round 2: NbOI₂ Devices**
+After the acetone soak, I conducted the active cyclic tests on the NbOI₂ devices. These devices also failed to exhibit the target optoelectronic modulation.
+
+<!-- 💡 操作提示：放 NbOI2 有源测试失败的图 -->
+<img width="500" alt="NbOI2 Active Failure" src="这里放 NbOI2 失败的数据图链接" />
+*Figure 4: Active testing results for the NbOI₂ devices post-acetone soak, yielding similar non-functional optical responses.*
+
+---
+
+### Step 4: Failure Analysis & Device Recycling Attempt
+
+After analyzing the complete failure of this batch, it became clear that the transfer process contamination and mechanical damage were fatal. 
+
+**Attempting Chip Recycling:**
+Silicon photonics nano-fabrication is highly resource-intensive, with a single fabrication cycle from design to completion taking nearly a month. To save time, I attempted to recycle these failed chips instead of waiting for a new batch. My plan was to strip away all the transferred 2D materials and residues using a high-power, long-duration plasma cleaning process, hoping to expose the pristine silicon waveguides underneath.
+
+**Result and Feedback:**
+The recycling attempt failed. Even after prolonged plasma exposure, the chips remained excessively dirty under the microscope. The likely reason is that the polymeric residues from the transfer stamps underwent cross-linking and hardened under the intense plasma heat, or they contained inorganic contaminants that standard oxygen/argon plasma chemistry could not etch away. 
+
+Consequently, I documented these failure mechanisms and shipped the batch back to NTU, providing critical feedback to refine the dry transfer pressure parameters and cleanliness protocols for the next fabrication cycle.
+
 
