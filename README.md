@@ -5,8 +5,8 @@ This repository documents the joint NTU-SJTU research project focused on charact
 
 The devices are designed as capacitor-like structures integrated directly over the silicon waveguides. The stack consists of a bottom electrode, a 2D material active channel (Graphene, Black Phosphorus, or NbOI₂), a ferroelectric dielectric layer (CIPS), and a top gate electrode.
 
-<!-- 💡 操作提示：这里放您的 Graphene/CIPS 结构图 -->
-<img width="500" alt="Device Schematic" src="这里放您的结构图链接" />
+<img width="720" height="365" alt="Structure Graphene" src="https://github.com/user-attachments/assets/b7bd77d2-1032-4cc5-8740-ab3b52b3de42" />
+
 
 *Figure 1: Schematic of the 2D material-integrated photonic device, illustrating the capacitor-like structure (Bottom Electrode / 2D Channel / CIPS / Top Gate) over a silicon waveguide.*
 
