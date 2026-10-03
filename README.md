@@ -82,19 +82,20 @@ Optical transmission was recorded across the telecommunication band from 1480 nm
 
 The measured transmission curves show negligible electro-optic modulation. Across repeated cycles under positive and negative 8 V pulses, the maximum variation in extinction ratio remains within 0.2 dB. The resonance dip position exhibits no observable wavelength shift. In this experimental setup, an optical variation below 0.2 dB falls within the baseline noise margin of optical fiber probe coupling and platform vibration. Therefore, this variation cannot be attributed to genuine electro-optic or ferroelectric switching and must be classified as measurement error.
 
-### Active Characterization Results: $\text{NbOI}_2$ Device
+### Active Characterization Results: NbOI<sub>2</sub> Device
 
 Active electro-optic characterization was subsequently conducted on the surviving $\text{NbOI}_2$/CIPS device, following acetone deprotection of the sacrificial polymethyl methacrylate layer.
 
 <img width="340" height="328" alt="NbOI2" src="https://github.com/user-attachments/assets/fa78162b-2369-4c00-8206-056f71727132" />
 
-*Figure 7: Optical Microscope Image of $\text{NbOI}_2$ Device*
+*Figure 7: Optical Microscope Image of NbOI<sub>2</sub> Device*
 
 Two sets of electrical excitation experiments were carried out on this device. The first experiment evaluated non-volatile ferroelectric switching using larger pulse amplitudes of positive and negative 10 V and 20 V. Higher amplitudes above the coercive threshold were chosen to guarantee complete domain reversal.
 
-<img width="340" height="328" alt="NbOI2" src="https://github.com/user-attachments/assets/df5045cb-89cb-470e-9926-93abc082c68b" />
+<img width="258" height="344" alt="NbOI2 cycle test" src="https://github.com/user-attachments/assets/d19447f7-5c06-45d6-a8ee-a0d69f30aee5" />
 
-*Figure 8: Ferroelectric Pulse Cycle Transmission Spectra and Zoomed Resonance Dip of $\text{NbOI}_2$ device*
+
+*Figure 8: Ferroelectric Pulse Cycle Transmission Spectra and Zoomed Resonance Dip of NbOI<sub>2</sub> device*
 
 Optical transmission was recorded from 1480 nm to 1640 nm, with detailed inspection centered at the transmission dip near 1550 nm. The measured spectra show no distinct ferroelectric switching response. Across all five voltage steps, the maximum variation in extinction ratio remains within 0.4 dB. The transmission dip exhibits random fluctuations rather than systematic red-shifts or blue-shifts. In this testing environment, an amplitude change within 0.4 dB and random peak shifts fall within the limits of optical coupling drift and stage vibration. Consequently, these variations are attributed to system measurement error rather than physical ferroelectric polarization switching.
 
@@ -102,7 +103,7 @@ The second experiment investigated the linear Pockels electro-optic response usi
 
 <img width="258" height="351" alt="NbOI2 high V" src="https://github.com/user-attachments/assets/6e597bd9-fc82-4cea-9a9f-6b4489fc8377" />
 
-*Figure 9: High-Voltage DC Transmission Spectra and Zoomed Resonance Dip of $\text{NbOI}_2$ device*
+*Figure 9: High-Voltage DC Transmission Spectra and Zoomed Resonance Dip of NbOI<sub>2</sub> device*
 
 The transmission curves across the voltage progression from 50 V to 150 V show no consistent linear electro-optic modulation. The maximum difference in extinction ratio across all voltage levels remains approximately 0.4 dB. The resonance dip does not follow a monotonic linear wavelength shift per volt. Because the optical response displays no regular trend and stays within the 0.4 dB coupling uncertainty threshold, the high-voltage test does not produce a measurable linear Pockels effect.
 
@@ -130,22 +131,56 @@ The first step takes microscope photos. A low-magnification photo records the ov
 
 The second step measures basic single-cycle and multi-cycle responses. The gate voltage sweeps continuously between negative 8 V and positive 8 V. Optical transmission at the 1550 nm telecommunication wavelength is measured synchronously during the voltage sweep alongside channel current. Then, pulsed voltage trains are applied to record optical transmission over time at 1550 nm across multiple cycles.
 
-| <img width="361" height="276" alt="WechatIMG2218" src="https://github.com/user-attachments/assets/9c9b1eb0-fe8a-4ee2-9059-5e0591ccb775" /> | <img width="357" height="276" alt="WechatIMG2219" src="https://github.com/user-attachments/assets/17190f6b-9f2d-4136-b687-92ad68797c85" /> |
-| *Figure 12: Single-cycle optical transmission at 1550 nm and channel current (I<sub>ds</sub>) hysteresis loops.* | *Figure 13: Dynamic Set/Reset pulse response showing time-resolved optical transmission switching.* |
+<table>
+  <tr>
+    <td align="center"><img width="361" height="276" alt="WechatIMG2218" src="https://github.com/user-attachments/assets/9c9b1eb0-fe8a-4ee2-9059-5e0591ccb775" /></td>
+    <td align="center"><img width="357" height="276" alt="WechatIMG2219" src="https://github.com/user-attachments/assets/17190f6b-2f2d-4136-b687-92ad68797c85" /></td>
+  </tr>
+  <tr>
+    <td align="center"><i>Figure 12: Single-cycle optical transmission at 1550 nm and channel current (I<sub>ds</sub>) hysteresis loops.</i></td>
+    <td align="center"><i>Figure 13: Dynamic Set/Reset pulse response showing time-resolved optical transmission switching.</i></td>
+  </tr>
+</table>
 
 The third step maps spectral shifts. Transmission spectra are recorded across the telecommunication band under different voltages. Resonance dip shifts and cavity quality factors are extracted and plotted against voltage to track cavity loss changes.
 
-| <img width="502" height="217" alt="WechatIMG2220" src="https://github.com/user-attachments/assets/2f69842c-2c8d-4de5-bdf2-8ca52d78fca2" /> | <img width="231" height="196" alt="WechatIMG2221" src="https://github.com/user-attachments/assets/9cb80671-28ce-4c47-9380-637a054605e5" /> | <img width="252" height="200" alt="WechatIMG2222" src="https://github.com/user-attachments/assets/b29fcb1f-95b7-4884-b650-7e064ecee327" /> |
-| *Figure 14: Gate-tunable broadband resonance shifts across 1520–1580 nm under discrete V<sub>G</sub> states.* | *Figure 15: Multi-wavelength resonance wavelength shift (Δλ<sub>0</sub>) hysteresis confirming tuning reversibility.* | *Figure 16: Gate-voltage-dependent Q-factor tuning hysteresis at multi-wavelengths.* |
+<table>
+  <tr>
+    <td align="center"><img width="502" height="217" alt="WechatIMG2220" src="https://github.com/user-attachments/assets/2f69842c-2c8d-4de5-bdf2-8ca52d78fca2" /></td>
+    <td align="center"><img width="231" height="196" alt="WechatIMG2221" src="https://github.com/user-attachments/assets/9cb80671-28ce-4c47-9380-637a054605e5" /></td>
+    <td align="center"><img width="252" height="200" alt="WechatIMG2222" src="https://github.com/user-attachments/assets/b29fcb1f-95b7-4884-b650-7e064ecee327" /></td>
+  </tr>
+  <tr>
+    <td align="center"><i>Figure 14: Gate-tunable broadband resonance shifts across 1520–1580 nm under discrete V<sub>G</sub> states.</i></td>
+    <td align="center"><i>Figure 15: Multi-wavelength resonance wavelength shift (Δλ<sub>0</sub>) hysteresis confirming tuning reversibility.</i></td>
+    <td align="center"><i>Figure 16: Gate-voltage-dependent Q-factor tuning hysteresis at multi-wavelengths.</i></td>
+  </tr>
+</table>
 
 The fourth step evaluates switching endurance and retention. Alternating set and reset pulses at 8 V repeat over multiple cycles to track transmission stability at 1550 nm. Following a single pulse, transmission is recorded over extended idle time at zero bias to evaluate non-volatile storage stability.
 
-| <img width="397" height="224" alt="WechatIMG2223" src="https://github.com/user-attachments/assets/ad9ddc92-3037-4913-80b4-83eb90fca4c5" /> |  <img width="390" height="227" alt="WechatIMG2224" src="https://github.com/user-attachments/assets/f5722f9e-a5f7-4c46-9db5-d22e2693ce1f" /> |
-| *Figure 17: 400-cycle Set/Reset endurance at 1550 nm demonstrating a stable memory window.* | *Figure 18: Zero-bias optical retention stability extrapolated to 10 years (24-hour measured baseline).*|
+<table>
+  <tr>
+    <td align="center"><img width="397" height="224" alt="WechatIMG2223" src="https://github.com/user-attachments/assets/ad9ddc92-3037-4913-80b4-83eb90fca4c5" /></td>
+    <td align="center"><img width="390" height="227" alt="WechatIMG2224" src="https://github.com/user-attachments/assets/f5722f9e-a5f7-4c46-9db5-d22e2693ce1f" /></td>
+  </tr>
+  <tr>
+    <td align="center"><i>Figure 17: 400-cycle Set/Reset endurance at 1550 nm demonstrating a stable memory window.</i></td>
+    <td align="center"><i>Figure 18: Zero-bias optical retention stability extrapolated to 10 years (24-hour measured baseline).</i></td>
+  </tr>
+</table>
 
 The final step tests multi-level state storage. Transmission spectra are compared between opposite saturated states. Variable pulse amplitudes between 0 V and 10 V are applied to record intermediate transmission levels for multi-bit optical memory.
 
-| <img width="377" height="217" alt="WechatIMG2225" src="https://github.com/user-attachments/assets/290fb1b8-191c-4387-be40-63d328393771" /> |  <img width="458" height="249" alt="WechatIMG2226" src="https://github.com/user-attachments/assets/ba93339a-6263-447f-aae8-1f96aeb9ec58" /> |
-| *Figure 8: Broadband (1500–1600 nm) transmission envelope contrast between saturated Set and Reset states.* | *Figure 9: Multi-level optical weight storage plateaus via incremental Set pulses (analog memristive behavior).* |
+<table>
+  <tr>
+    <td align="center"><img width="377" height="217" alt="WechatIMG2225" src="https://github.com/user-attachments/assets/290fb1b8-191c-4387-be40-63d328393771" /></td>
+    <td align="center"><img width="458" height="249" alt="WechatIMG2226" src="https://github.com/user-attachments/assets/ba93339a-6263-447f-aae8-1f96aeb9ec58" /></td>
+  </tr>
+  <tr>
+    <td align="center"><i>Figure 19: Broadband (1500–1600 nm) transmission envelope contrast between saturated Set and Reset states.</i></td>
+    <td align="center"><i>Figure 20: Multi-level optical weight storage plateaus via incremental Set pulses (analog memristive behavior).</i></td>
+  </tr>
+</table>
 
 All reference figures in this section are adapted from Y. Zhang et al., “On-chip optical memristors based on ferroelectric-doped graphene,” Optica, vol. 12, no. 1, pp. 88–98, Jan. 2025.
