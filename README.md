@@ -134,7 +134,7 @@ The second step measures basic single-cycle and multi-cycle responses. The gate 
 <table>
   <tr>
     <td align="center"><img width="361" height="276" alt="WechatIMG2218" src="https://github.com/user-attachments/assets/9c9b1eb0-fe8a-4ee2-9059-5e0591ccb775" /></td>
-    <td align="center"><img width="357" height="276" alt="WechatIMG2219" src="https://github.com/user-attachments/assets/17190f6b-2f2d-4136-b687-92ad68797c85" /></td>
+    <td align="center"><img width="357" height="276" alt="WechatIMG2219" src="https://github.com/user-attachments/assets/a6415e99-a5d8-437e-add8-c9b6a8ee5654" /></td>
   </tr>
   <tr>
     <td align="center"><i>Figure 12: Single-cycle optical transmission at 1550 nm and channel current (I<sub>ds</sub>) hysteresis loops.</i></td>
