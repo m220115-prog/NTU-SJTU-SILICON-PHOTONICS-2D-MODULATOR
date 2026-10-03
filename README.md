@@ -17,6 +17,8 @@ The optoelectronic characterization platform uses a four-probe station. Two opti
 
 *Figure 2: Schematic Diagram of the Optoelectronic Testbed*
 
+<img width="476" height="848" alt="工作台" src="https://github.com/user-attachments/assets/54000ced-9cc5-4346-979a-ae426ab0fe0c" />
+
 *Figure 3: Photograph of the Physical Four-Probe Station Setup*
 
 Electrical excitation is supplied by two separate sources. The RIGOL DG4202 arbitrary waveform generator outputs voltage pulses up to 10 V with transition times under 5 ns. Its advantage is automated microsecond pulse programming without manual triggering errors. The Keithley 2400 Source Measure Unit provides a wide voltage output range up to 200 V and high precision current measurement. It is used for high-voltage DC characterization.
@@ -183,4 +185,4 @@ The final step tests multi-level state storage. Transmission spectra are compare
   </tr>
 </table>
 
-All reference figures in this section are adapted from Y. Zhang et al., “On-chip optical memristors based on ferroelectric-doped graphene,” Optica, vol. 12, no. 1, pp. 88–98, Jan. 2025.
+All reference figures in this section are adapted from *Y. Zhang et al., “On-chip optical memristors based on ferroelectric-doped graphene,” Optica, vol. 12, no. 1, pp. 88–98, Jan. 2025.*
