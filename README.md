@@ -17,7 +17,7 @@ The optoelectronic characterization platform uses a four-probe station. Two opti
 
 *Figure 2: Schematic Diagram of the Optoelectronic Testbed*
 
-<img width="476" height="848" alt="工作台" src="https://github.com/user-attachments/assets/54000ced-9cc5-4346-979a-ae426ab0fe0c" />
+<img width="291" height="507" alt="image" src="https://github.com/user-attachments/assets/d90b6364-03a2-47c4-b885-67945f9467a3" />
 
 *Figure 3: Photograph of the Physical Four-Probe Station Setup*
 
