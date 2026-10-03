@@ -1,4 +1,4 @@
-<img width="312" height="220" alt="Polarization-Voltage Hysteresis Loop of CIPS" src="https://github.com/user-attachments/assets/61fdbf03-3ca3-45cc-81ef-893fb79e60b3" /># NTU-SJTU-SILICON-PHOTONICS-2D-MODULATOR
+# NTU-SJTU-SILICON-PHOTONICS-2D-MODULATOR
 # Optoelectronic Characterization of 2D Material-Integrated Silicon Photonic Devices
 
 This repository documents the joint NTU-SJTU research project focused on characterizing novel 2D material-based optical modulators. The silicon photonic chips, featuring micro-ring resonators (MRRs) and photonic crystals, were fabricated at NTU. My primary role at SJTU was to design the testing protocols, build the characterization setup, execute the measurements, and perform deep failure analysis.
@@ -124,21 +124,28 @@ A full experimental protocol was designed before testing. This plan refers to re
 
 The first step takes microscope photos. A low-magnification photo records the overall device layout and electrode pads. A high-magnification photo inspects flake coverage and waveguide alignment.
 
+<img width="774" height="296" alt="高倍镜和低倍镜" src="https://github.com/user-attachments/assets/bbc626b1-5215-4438-8d2d-bc75964cb0fe" />
+
 *Figure 11: Target Optical Microscope Photos at Low and High Magnification*
 
 The second step measures basic single-cycle and multi-cycle responses. The gate voltage sweeps continuously between negative 8 V and positive 8 V. Optical transmission at the 1550 nm telecommunication wavelength is measured synchronously during the voltage sweep alongside channel current. Then, pulsed voltage trains are applied to record optical transmission over time at 1550 nm across multiple cycles.
 
-*Figure: Target Single-Cycle Hysteresis and Multi-Cycle Pulse Response Curves*
+| <img width="361" height="276" alt="WechatIMG2218" src="https://github.com/user-attachments/assets/9c9b1eb0-fe8a-4ee2-9059-5e0591ccb775" /> | <img width="357" height="276" alt="WechatIMG2219" src="https://github.com/user-attachments/assets/17190f6b-9f2d-4136-b687-92ad68797c85" /> |
+| *Figure 12: Single-cycle optical transmission at 1550 nm and channel current (I<sub>ds</sub>) hysteresis loops.* | *Figure 13: Dynamic Set/Reset pulse response showing time-resolved optical transmission switching.* |
 
 The third step maps spectral shifts. Transmission spectra are recorded across the telecommunication band under different voltages. Resonance dip shifts and cavity quality factors are extracted and plotted against voltage to track cavity loss changes.
 
-*Figure: Target Wavelength Shifts and Quality Factor versus Voltage Plots*
+| <img width="502" height="217" alt="WechatIMG2220" src="https://github.com/user-attachments/assets/2f69842c-2c8d-4de5-bdf2-8ca52d78fca2" /> | <img width="231" height="196" alt="WechatIMG2221" src="https://github.com/user-attachments/assets/9cb80671-28ce-4c47-9380-637a054605e5" /> | <img width="252" height="200" alt="WechatIMG2222" src="https://github.com/user-attachments/assets/b29fcb1f-95b7-4884-b650-7e064ecee327" /> |
+| *Figure 14: Gate-tunable broadband resonance shifts across 1520–1580 nm under discrete V<sub>G</sub> states.* | *Figure 15: Multi-wavelength resonance wavelength shift (Δλ<sub>0</sub>) hysteresis confirming tuning reversibility.* | *Figure 16: Gate-voltage-dependent Q-factor tuning hysteresis at multi-wavelengths.* |
 
 The fourth step evaluates switching endurance and retention. Alternating set and reset pulses at 8 V repeat over multiple cycles to track transmission stability at 1550 nm. Following a single pulse, transmission is recorded over extended idle time at zero bias to evaluate non-volatile storage stability.
 
-*Figure: Target Endurance Cycles and Zero-Bias Retention Curves*
+| <img width="397" height="224" alt="WechatIMG2223" src="https://github.com/user-attachments/assets/ad9ddc92-3037-4913-80b4-83eb90fca4c5" /> |  <img width="390" height="227" alt="WechatIMG2224" src="https://github.com/user-attachments/assets/f5722f9e-a5f7-4c46-9db5-d22e2693ce1f" /> |
+| *Figure 17: 400-cycle Set/Reset endurance at 1550 nm demonstrating a stable memory window.* | *Figure 18: Zero-bias optical retention stability extrapolated to 10 years (24-hour measured baseline).*|
 
 The final step tests multi-level state storage. Transmission spectra are compared between opposite saturated states. Variable pulse amplitudes between 0 V and 10 V are applied to record intermediate transmission levels for multi-bit optical memory.
 
-*Figure: Target Extreme State Contrast and Multi-Level Storage Steps*
+| <img width="377" height="217" alt="WechatIMG2225" src="https://github.com/user-attachments/assets/290fb1b8-191c-4387-be40-63d328393771" /> |  <img width="458" height="249" alt="WechatIMG2226" src="https://github.com/user-attachments/assets/ba93339a-6263-447f-aae8-1f96aeb9ec58" /> |
+| *Figure 8: Broadband (1500–1600 nm) transmission envelope contrast between saturated Set and Reset states.* | *Figure 9: Multi-level optical weight storage plateaus via incremental Set pulses (analog memristive behavior).* |
 
+All reference figures in this section are adapted from Y. Zhang et al., “On-chip optical memristors based on ferroelectric-doped graphene,” Optica, vol. 12, no. 1, pp. 88–98, Jan. 2025.
