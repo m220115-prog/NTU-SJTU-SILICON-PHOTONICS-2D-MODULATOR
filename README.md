@@ -1,4 +1,4 @@
-# NTU-SJTU-SILICON-PHOTONICS-2D-MODULATOR
+<img width="312" height="220" alt="Polarization-Voltage Hysteresis Loop of CIPS" src="https://github.com/user-attachments/assets/61fdbf03-3ca3-45cc-81ef-893fb79e60b3" /># NTU-SJTU-SILICON-PHOTONICS-2D-MODULATOR
 # Optoelectronic Characterization of 2D Material-Integrated Silicon Photonic Devices
 
 This repository documents the joint NTU-SJTU research project focused on characterizing novel 2D material-based optical modulators. The silicon photonic chips, featuring micro-ring resonators (MRRs) and photonic crystals, were fabricated at NTU. My primary role at SJTU was to design the testing protocols, build the characterization setup, execute the measurements, and perform deep failure analysis.
@@ -9,110 +9,136 @@ The devices are designed based on a Metal-Oxide-Semiconductor (MOS) capacitor co
 
 *Figure 1: Schematic diagram of the hybrid 2D-material-integrated photonic device, showing the MOS-like gated stack configured directly over the SiN waveguide.*
 
----
+## Experimental Setup & Characterization Methodology
 
-### Step 1: Experimental Setup & Test Protocol Design
+### Testbed Construction and Instrumentation
 
-### 1. Theoretical Framework: Voltage-Dependent Electro-Optic Mechanisms
+The optoelectronic characterization platform uses a four-probe station. Two optical fiber probes align to the chip facets to couple light into and out of the waveguides. Two electrical tungsten probes make contact with the coplanar gold pads on the device. The platform connects to a tunable laser and an optical spectrum analyzer.
 
-The electro-optic (EO) modulation in our hybrid 2D-material-integrated device originates from the interplay between two distinct physical mechanisms: the **linear Pockels effect** and **non-linear ferroelectric polarization switching**.
+*Figure 2: Schematic Diagram of the Optoelectronic Testbed*
 
-### 1. Theoretical Framework: Voltage-Dependent Electro-Optic Mechanisms
+*Figure 3: Photograph of the Physical Four-Probe Station Setup*
 
-The electro-optic (EO) modulation in our hybrid $NbOI_2$/CIPS-on-SiN device originates from the interplay between two distinct physical mechanisms: the **linear Pockels effect** and **non-linear ferroelectric polarization switching**.
+Electrical excitation is supplied by two separate sources. The RIGOL DG4202 arbitrary waveform generator outputs voltage pulses up to 10 V with transition times under 5 ns. Its advantage is automated microsecond pulse programming without manual triggering errors. The Keithley 2400 Source Measure Unit provides a wide voltage output range up to 200 V and high precision current measurement. It is used for high-voltage DC characterization.
 
-#### 1.1 Linear Pockels Effect & Theoretical Limits
-Under an external bias, the non-centrosymmetric $NbOI_2$ layer exhibits a linear Pockels response. The electric-field-induced refractive index change ($\Delta n_{\text{Pockels}}$) is modeled as:
-$$\Delta n_{\text{Pockels}} = \frac{1}{2} n^3 r E = \frac{1}{2} n^3 r \left(\frac{V}{d}\right)$$
+### Passive Optical Screening and Device Health Status
 
-Where the physical parameters are defined as:
-* $n \approx 2.4$: Refractive index of $NbOI_2$ at $\lambda_0 = 1550$ nm.
-* $r \approx 8.5 \times 10^{-12}$ m/V: Linear electro-optic (Pockels) coefficient of $NbOI_2$.
-* $d \approx 8$ μm: Effective electrical thickness between the top and bottom electrodes.
-* $\Gamma \approx 0.10$: Optical mode overlap factor within the active $NbOI_2$ region, pre-calculated via 2D mode-solving simulations (Lumerical MODE).
+Passive optical transmission was measured across all fabricated waveguides on the chip before conducting active electrical tests. Transverse electric polarized light was swept from 1480 nm to 1640 nm.
 
-By accounting for the mode overlap ($\Delta n_{\text{eff}} = \Gamma \Delta n_{\text{Pockels}}$) and a coverage ratio of $1/4$ along the microring waveguide, the theoretical resonance wavelength shift ($\Delta \lambda$) per volt is derived as:
-$$\frac{\Delta \lambda}{\Delta V} = \frac{\lambda_0}{n_g} \cdot \frac{\Delta n_{\text{eff}}}{\Delta V} \approx 0.14 \text{ pm/V}$$
-*(Note: $n_g \approx 2.0$ represents the group index of the waveguide).* 
+Most devices on the chip were damaged during the material transfer process and could not couple light. Only one black phosphorus device and one $\text{NbOI}_2$/CIPS hybrid device remained transmissive.
 
-This continuous, volatile response is present across all voltage ranges but remains extremely weak, establishing a negligible baseline for active modulation.
+The black phosphorus device is damaged. Its transmission shows that the microring resonance is degraded into Fabry-Perot cavity resonance with shifted peak positions and altered free spectral range. The $\text{NbOI}_2$/CIPS device is also partially damaged and exhibits high insertion loss along the ring boundary.
 
-#### 1.2 Non-linear Ferroelectric Switching
-In contrast, when the applied field exceeds the coercive field ($E_c$) of the CIPS layer, ferroelectric domain switching is triggered, leading to a spontaneous polarization change ($\Delta P$). The resulting refractive index shift is non-volatile and scales quadratically with polarization:
-$$\Delta n_{\text{Ferro}} \propto P^2$$
-This mechanism delivers an abrupt, order-of-magnitude larger refractive index leap, enabling robust non-volatile optical memory states.
-
-#### 1.3 Voltage Regimes & Transition Dynamics
-Based on the coercive threshold of the CIPS layer, the device operation is divided into three distinct regimes:
-
-1. **Sub-Coercive Regime (0 – 7 V):**
-   The electric field is below the switching threshold ($E < E_c$). The ferroelectric domains remain clamped, and the device response is dominated solely by the weak, linear Pockels baseline ($\sim 0.14 \text{ pm/V}$).
-   
-2. **Ferroelectric Switching Regime (7 – 14 V) — Core Study Area:**
-   The applied voltage overcomes the coercive field, initiating rapid domain reversal in CIPS. The dramatic shift in polarization ($\Delta P$) yields a giant, hysteretic wavelength shift with non-volatile retention, which serves as the foundation for our memory modulator.
-
-3. **Saturation Regime (> 14 V):**
-   The ferroelectric polarization reaches saturation ($P = P_{\text{sat}}$). Beyond this threshold, no further domain reorientation can occur ($\Delta P = 0$), and the incremental optical response reverts to the weak, linear Pockels slope superimposed on the saturated state.
+The experimental testing sequence is determined by material protection requirements. Low-dimensional materials oxidize rapidly in ambient air. In addition to vacuum packaging, the $\text{NbOI}_2$/CIPS device was spin-coated with a protective polymethyl methacrylate layer. Removing this polymer requires an acetone wash. Acetone washing will permanently damage all exposed adjacent devices including the black phosphorus flake. Therefore, all passive and active measurements on the black phosphorus device are conducted first. Chemical deprotection is performed afterward to expose the coplanar electrodes of the $\text{NbOI}_2$/CIPS device.
 
 
+### Theoretical Framework and Active Modulation Mechanisms
 
+Active modulation characterization is primarily focused on the surviving $\text{NbOI}_2$/CIPS device. The black phosphorus device was also measured under active bias for comparative analysis.
 
+Modulation in the hybrid device combines the linear Pockels effect and interfacial ferroelectric gating. Symmetrical coplanar gold electrodes sit on both sides of the SiN waveguide with a lateral gap spacing $g$ of 8 $\mu\text{m}$. This lateral configuration prevents metal absorption loss.
 
+An applied bias creates a lateral electric field $E = V/g$. This field modifies the refractive index of the $\text{NbOI}_2$ layer:
 
-**Test Protocol Design:** I independently designed the entire characterization sequence. Instead of simple sweeps, the core of the active testing was designed around cyclic pulse measurements. The protocol involved applying a specific programming voltage pulse to polarize the ferroelectric CIPS layer, followed by a reading phase to record the transmission spectrum. By extracting the resonance wavelength shift (Δλ₀) and changes in the peak intensity and Q-factor over multiple cycles, the goal was to quantify the non-volatile memory effects. The physical mechanism behind this design relies on the principle that the change in the effective refractive index (Δn) is proportional to the square of the ferroelectric polarization (Δn ∝ P²).
+$$\Delta n_{\text{Pockels}} = \frac{1}{2} n^3 r E = \frac{1}{2} n^3 r \frac{V}{g}$$
 
-<!-- 💡 操作提示：这里放您搭台子的照片 -->
-<img width="500" alt="Test Setup" src="这里放测试平台照片的链接" />
+At 1550 nm, $\text{NbOI}_2$ has a refractive index $n \approx 2.4$ and a linear Pockels coefficient $r \approx 8.5 \times 10^{-12}\ \text{m/V}$. Optical simulations give a mode overlap factor $\Gamma \approx 0.10$ in the active region. The material covers one quarter of the microring circumference. The theoretical resonance wavelength shift per volt is:
 
-*Figure 2: The custom-built four-probe optoelectronic characterization setup.*
+$$\frac{\Delta \lambda}{\Delta V} = \frac{\lambda_0}{n_g} \frac{\Delta n_{\text{eff}}}{\Delta V} \approx 0.14\ \text{pm/V}$$
 
----
+Here $n_g \approx 2.0$ is the group index of the waveguide.
 
-### Step 2: Passive Screening & Structural Integrity
+Although both $\text{NbOI}_2$ and CIPS possess ferroelectric properties, their operational roles differ fundamentally due to their distinct spontaneous polarization orientations. $\text{NbOI}_2$ is an in-plane ferroelectric material where the spontaneous polarization aligns laterally within the 2D plane. In this device configuration, $\text{NbOI}_2$ serves as the non-centrosymmetric optical channel to supply the fast linear Pockels electro-optic response, rather than acting as a non-volatile gating medium. In contrast, CIPS is an out-of-plane ferroelectric material with spontaneous polarization oriented vertically perpendicular to the layers. The vertical polarization reversal in CIPS generates high-density surface bound charges directly across the van der Waals interface, providing strong electrostatic gating to switch the optical transmission states.
 
-Before active testing, I performed passive spectral measurements on all devices to check their basic optical functionality post-transfer. 
+Based on experimental polarization-voltage hysteresis data of CIPS, the coercive voltage $V_c$ is 1.5 V and the saturation voltage $V_{\text{sat}}$ is 4.5 V.
 
-The screening criteria went beyond simply finding a resonance peak. I specifically checked if the **number of peaks** and the **Free Spectral Range (FSR, the distance between peaks)** matched the theoretical design. 
+<img width="312" height="220" alt="Polarization-Voltage Hysteresis Loop of CIPS" src="https://github.com/user-attachments/assets/d30cac0c-4a87-4e4c-9460-49890c827ef0" />
 
-If the peaks were completely missing, or if the FSR was severely distorted, it indicated that light was no longer propagating through the designed optical path. Through microscopic inspection, I identified several root causes for these passive failures:
-1. **Severe Contamination:** Heavy residues from the dry transfer process completely blocked the optical pathways.
-2. **Mechanical Damage:** The excessive mechanical pressure applied during the dry transfer process physically crushed the fragile silicon photonic structures (MRRs and waveguides).
+*Figure 4: Polarization-Voltage Hysteresis Loop of CIPS with Coercive and Saturation Thresholds*
 
----
+These threshold voltages divide the device operation into three distinct regimes.
 
-### Step 3: Active Testing & Sequential Failures
+In the sub-coercive regime from 0 V to 1.5 V, the electric field remains below the coercive threshold $V_c$. The ferroelectric domains do not switch, and the optical response follows the weak linear Pockels baseline.
 
-For the devices that survived the passive screening, I proceeded with the active cyclic testing. However, the initial testing round revealed a series of sequential failures.
+In the ferroelectric switching regime from 1.5 V to 4.5 V, the external electric field switches the CIPS layer between its two stable remnant polarization states, $+1$ and $-1$. These opposing polarization states induce opposite electrostatic surface charges at the interface. This electrostatic gating directly shifts the Fermi level and modulates carrier concentration in the underlying 2D channel layer, switching the device between state 1 with high optical transmission and state 0 with low optical transmission. Operating between these two saturated remnant polarizations provides stable, non-volatile optical memory states while avoiding the instability of intermediate unpolarized states.
 
-**Round 1: Graphene and Black Phosphorus (BP) Devices**
-I first applied the active testing protocol to the Graphene and BP devices. Both sets of devices failed to show the expected non-volatile spectral modulation. The data revealed a complete absence of the designed memory window.
+In the saturation regime above 4.5 V, the spontaneous ferroelectric polarization reaches its saturation limit. The accumulated interface charge remains constant, and no further polarization switching occurs. The optical response in this high-field regime is governed solely by the linear Pockels effect superimposed on the saturated background.
 
-<!-- 💡 操作提示：放 Graphene 和 BP 有源测试失败的图 -->
-<img width="500" alt="Graphene and BP Active Failure" src="这里放 Graphene 和 BP 失败的数据图链接" />
-*Figure 3: Active testing results for Graphene and BP devices, showing a complete lack of expected ferroelectric memory modulation.*
+### Active Characterization Results: Black Phosphorus Device
 
-**Process Intervention: PMMA Removal**
-Because the chips were shipped from NTU in a vacuum with a protective PMMA layer specifically coating the NbOI₂ flakes, I had to soak the entire chip in acetone to strip the PMMA before testing the NbOI₂ devices. Unfortunately, this necessary solvent soaking process completely destroyed the remaining Graphene and BP structures, as they lacked protective coatings and were highly sensitive to solvents.
+Active electro-optic characterization was first conducted on the surviving black phosphorus device.
 
-**Round 2: NbOI₂ Devices**
-After the acetone soak, I conducted the active cyclic tests on the NbOI₂ devices. These devices also failed to exhibit the target optoelectronic modulation.
+<img width="600" height="428" alt="BP213" src="https://github.com/user-attachments/assets/2bcf8079-a72c-41e7-b16d-74f843de0141" />
 
-<!-- 💡 操作提示：放 NbOI2 有源测试失败的图 -->
-<img width="500" alt="NbOI2 Active Failure" src="这里放 NbOI2 失败的数据图链接" />
-*Figure 4: Active testing results for the NbOI₂ devices post-acetone soak, yielding similar non-functional optical responses.*
+*Figure 5: Optical Microscope Image of Black Phosphorus Device*
 
----
+The measurement protocol applied automated cyclic electrical pulses using a driving voltage of 8 V. Based on the coercive field requirements, an amplitude of 8 V is theoretically sufficient to complete both the set and reset polarization processes across the active channel. The excitation sequence cycled repeatedly between positive 8 V and negative 8 V pulses to evaluate reversible optical switching.
 
-### Step 4: Failure Analysis & Device Recycling Attempt
+<img width="317" height="343" alt="BP cycle test" src="https://github.com/user-attachments/assets/fc96abcb-53f9-4bcb-9497-5f24df99cbf6" />
 
-After analyzing the complete failure of this batch, it became clear that the transfer process contamination and mechanical damage were fatal. 
+*Figure 6: Ferroelectric Pulse Cycle Transmission Spectra and Zoomed Resonance Dip of BP Device*
 
-**Attempting Chip Recycling:**
-Silicon photonics nano-fabrication is highly resource-intensive, with a single fabrication cycle from design to completion taking nearly a month. To save time, I attempted to recycle these failed chips instead of waiting for a new batch. My plan was to strip away all the transferred 2D materials and residues using a high-power, long-duration plasma cleaning process, hoping to expose the pristine silicon waveguides underneath.
+Optical transmission was recorded across the telecommunication band from 1480 nm to 1640 nm. The detailed zoom-in region around the resonance dip near 1550 nm tracks the spectral shift across multiple alternating set and reset pulses.
 
-**Result and Feedback:**
-The recycling attempt failed. Even after prolonged plasma exposure, the chips remained excessively dirty under the microscope. The likely reason is that the polymeric residues from the transfer stamps underwent cross-linking and hardened under the intense plasma heat, or they contained inorganic contaminants that standard oxygen/argon plasma chemistry could not etch away. 
+The measured transmission curves show negligible electro-optic modulation. Across repeated cycles under positive and negative 8 V pulses, the maximum variation in extinction ratio remains within 0.2 dB. The resonance dip position exhibits no observable wavelength shift. In this experimental setup, an optical variation below 0.2 dB falls within the baseline noise margin of optical fiber probe coupling and platform vibration. Therefore, this variation cannot be attributed to genuine electro-optic or ferroelectric switching and must be classified as measurement error.
 
-Consequently, I documented these failure mechanisms and shipped the batch back to NTU, providing critical feedback to refine the dry transfer pressure parameters and cleanliness protocols for the next fabrication cycle.
+### Active Characterization Results: $\text{NbOI}_2$ Device
 
+Active electro-optic characterization was subsequently conducted on the surviving $\text{NbOI}_2$/CIPS device, following acetone deprotection of the sacrificial polymethyl methacrylate layer.
+
+<img width="340" height="328" alt="NbOI2" src="https://github.com/user-attachments/assets/fa78162b-2369-4c00-8206-056f71727132" />
+
+*Figure 7: Optical Microscope Image of $\text{NbOI}_2$ Device*
+
+Two sets of electrical excitation experiments were carried out on this device. The first experiment evaluated non-volatile ferroelectric switching using larger pulse amplitudes of positive and negative 10 V and 20 V. Higher amplitudes above the coercive threshold were chosen to guarantee complete domain reversal.
+
+<img width="340" height="328" alt="NbOI2" src="https://github.com/user-attachments/assets/df5045cb-89cb-470e-9926-93abc082c68b" />
+
+*Figure 8: Ferroelectric Pulse Cycle Transmission Spectra and Zoomed Resonance Dip of $\text{NbOI}_2$ device*
+
+Optical transmission was recorded from 1480 nm to 1640 nm, with detailed inspection centered at the transmission dip near 1550 nm. The measured spectra show no distinct ferroelectric switching response. Across all five voltage steps, the maximum variation in extinction ratio remains within 0.4 dB. The transmission dip exhibits random fluctuations rather than systematic red-shifts or blue-shifts. In this testing environment, an amplitude change within 0.4 dB and random peak shifts fall within the limits of optical coupling drift and stage vibration. Consequently, these variations are attributed to system measurement error rather than physical ferroelectric polarization switching.
+
+The second experiment investigated the linear Pockels electro-optic response using the Keithley 2400 source measure unit in high-voltage DC mode. Static DC bias was stepped from 50 V to 150 V with a step size of 25 V to observe field-induced linear refractive index changes.
+
+<img width="258" height="351" alt="NbOI2 high V" src="https://github.com/user-attachments/assets/6e597bd9-fc82-4cea-9a9f-6b4489fc8377" />
+
+*Figure 9: High-Voltage DC Transmission Spectra and Zoomed Resonance Dip of $\text{NbOI}_2$ device*
+
+The transmission curves across the voltage progression from 50 V to 150 V show no consistent linear electro-optic modulation. The maximum difference in extinction ratio across all voltage levels remains approximately 0.4 dB. The resonance dip does not follow a monotonic linear wavelength shift per volt. Because the optical response displays no regular trend and stays within the 0.4 dB coupling uncertainty threshold, the high-voltage test does not produce a measurable linear Pockels effect.
+
+### Failure Analysis and Fabrication Insights
+
+Optical microscope inspection after testing reveals two primary causes for device failure and excessive optical loss.
+
+The first issue originates from surface contamination during the dry transfer process. Dry transfer lacks spatial selectivity. Transferring exfoliated 2D flakes onto specific target areas inevitably leaves unwanted material fragments and polymer residue across adjacent structures. Because these 2D crystals have high refractive indices, stray flakes directly perturb the optical mode and introduce severe scattering loss. This extensive contamination along the waveguides explains the elevated insertion loss across the surviving devices.
+
+The second issue stems from excessive mechanical pressure during stamping. The dry transfer protocol requires mechanical contact to press the transfer elastomer against the chip surface. Microscope inspection indicates that multiple photonic structures suffered mechanical destruction during this contact step. Optical coupling channels and bus waveguides were fractured or crushed by the applied pressure. This structural damage directly explains why most devices failed initial passive optical coupling. Furthermore, mechanical pressing damaged the ring cavity boundary on the black phosphorus device, causing the observed collapse of microring resonance into an irregular Fabry-Perot interference cavity.
+
+<img width="850" height="604" alt="destroyed BP" src="https://github.com/user-attachments/assets/30b37b58-cb4f-44ce-a047-b1be87435f9f" />
+
+*Figure 10: Optical Microscope Image of Mechanically Damaged Black Phosphorus Device*
+
+### Appendix: Planned Characterization Protocol
+
+A full experimental protocol was designed before testing. This plan refers to recent literature on 2D ferroelectric optical modulators. It outlines the systematic steps to verify device behavior once clean fabrication is achieved. Because the initial cycle showed no active modulation due to transfer damage, subsequent steps were halted. The full testing logic is preserved below.
+
+The first step takes microscope photos. A low-magnification photo records the overall device layout and electrode pads. A high-magnification photo inspects flake coverage and waveguide alignment.
+
+*Figure 11: Target Optical Microscope Photos at Low and High Magnification*
+
+The second step measures basic single-cycle and multi-cycle responses. The gate voltage sweeps continuously between negative 8 V and positive 8 V. Optical transmission at the 1550 nm telecommunication wavelength is measured synchronously during the voltage sweep alongside channel current. Then, pulsed voltage trains are applied to record optical transmission over time at 1550 nm across multiple cycles.
+
+*Figure: Target Single-Cycle Hysteresis and Multi-Cycle Pulse Response Curves*
+
+The third step maps spectral shifts. Transmission spectra are recorded across the telecommunication band under different voltages. Resonance dip shifts and cavity quality factors are extracted and plotted against voltage to track cavity loss changes.
+
+*Figure: Target Wavelength Shifts and Quality Factor versus Voltage Plots*
+
+The fourth step evaluates switching endurance and retention. Alternating set and reset pulses at 8 V repeat over multiple cycles to track transmission stability at 1550 nm. Following a single pulse, transmission is recorded over extended idle time at zero bias to evaluate non-volatile storage stability.
+
+*Figure: Target Endurance Cycles and Zero-Bias Retention Curves*
+
+The final step tests multi-level state storage. Transmission spectra are compared between opposite saturated states. Variable pulse amplitudes between 0 V and 10 V are applied to record intermediate transmission levels for multi-bit optical memory.
+
+*Figure: Target Extreme State Contrast and Multi-Level Storage Steps*
 
