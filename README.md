@@ -1,5 +1,5 @@
 # NTU-SJTU-SILICON-PHOTONICS-2D-MODULATOR
-# Optoelectronic Characterization of 2D Material-Integrated Silicon Photonic Devices
+## Optoelectronic Characterization of 2D Material-Integrated Silicon Photonic Devices
 
 This repository documents the joint NTU-SJTU research project focused on characterizing novel 2D material-based optical modulators. The silicon photonic chips, featuring micro-ring resonators (MRRs) and photonic crystals, were fabricated at NTU. My primary role at SJTU was to design the testing protocols, build the characterization setup, execute the measurements, and perform deep failure analysis.
 
