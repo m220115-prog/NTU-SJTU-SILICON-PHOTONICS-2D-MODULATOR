@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="540" viewBox="0 0 1120 540" role="img" aria-labelledby="title desc">
+  <title id="title">Proposed two-dimensional magneto-optic heterostructure on a silicon nitride microring</title>
+  <desc id="desc">The conceptual layer sequence, from top to bottom, is a graphene gate, hBN, alpha indium selenide, iron germanium telluride, and a silicon nitride microring waveguide. This is a design proposal redrawn from June 2026 meeting slides, and is not to scale.</desc>
+  <rect width="1120" height="540" fill="white"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#17243a">
+    <text x="42" y="44" font-size="25" font-weight="700">2D magneto-optic stack on a SiN microring</text>
+    <text x="42" y="76" font-size="16" fill="#58677a">June 2026 design proposal · material sequence · not to scale</text>
+    <text x="90" y="116" font-size="15" fill="#58677a">Proposed layer stack</text>
+    <text x="602" y="116" font-size="15" fill="#58677a">Role considered in the design</text>
+    <rect x="90" y="134" width="450" height="56" fill="#ebc75c" stroke="#b49636"/>
+    <text x="116" y="169" font-size="21" font-weight="700">Graphene top gate</text>
+    <text x="602" y="167" font-size="18">Optically accessible electrical gate</text>
+    <rect x="90" y="202" width="450" height="56" fill="#dbe7f3" stroke="#9eb4ca"/>
+    <text x="116" y="237" font-size="21" font-weight="700">hBN · 2–5 nm</text>
+    <text x="602" y="235" font-size="18">Gate insulation and encapsulation</text>
+    <rect x="90" y="270" width="450" height="56" fill="#f6d2af" stroke="#d5a778"/>
+    <text x="116" y="305" font-size="21" font-weight="700">α-In₂Se₃</text>
+    <text x="602" y="303" font-size="18">Ferroelectric / piezoelectric coupling</text>
+    <rect x="90" y="338" width="450" height="56" fill="#d3c7e8" stroke="#aa96c4"/>
+    <text x="116" y="373" font-size="21" font-weight="700">Fe₃GeTe₂ (FGT) · 5–10 nm</text>
+    <text x="602" y="371" font-size="18">Magnetic layer near the guided mode</text>
+    <rect x="90" y="406" width="450" height="56" fill="#a8c9d8" stroke="#6b9db4"/>
+    <text x="116" y="441" font-size="21" font-weight="700">SiN microring waveguide</text>
+    <text x="602" y="439" font-size="18">Optical interaction with the transferred stack</text>
+    <text x="90" y="502" font-size="15" fill="#58677a">Thicknesses are proposal values. Electrode contacts and lateral device dimensions require further design.</text>
+  </g>
+</svg>

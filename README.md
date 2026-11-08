@@ -9,8 +9,8 @@ My exchange work connected 2D-material integration with photonic-device testing.
 | --- | --- | --- |
 | 2D / ferroelectric photonic devices | Test planning, optical alignment, bias-dependent spectra and analysis of transfer-related device issues | Experimental characterization |
 | [Graphene heaters for phase-change photonics](projects/graphene-pcm-heaters.md) | Graphene wet transfer, active testing and contributions to electrode-layout redesign | Fabrication, testing and design investigation |
-| [Microring arrays for matrix computation](projects/microring-matrix-computing.md) | CNN-kernel mapping, transmission spectra and optical-output-power measurements | Experimental work on silicon microring arrays |
-| Magneto-optic modulator concepts | Material assessment, device design and simulation | Exploratory design study |
+| [Microring arrays and matrix computation](projects/microring-matrix-computing.md) | Matrix mapping, thermal tuning, nine-ring experiments and optical measurements | Experimental characterization and computing-related work |
+| [Magneto-optic modulator concepts](projects/magneto-optic-concepts.md) | Material assessment, structure development and transfer-process planning | Exploratory design study |
 
 ## 1. Characterization of 2D / ferroelectric photonic devices
 
@@ -30,6 +30,8 @@ My work included writing testing protocols, assembling and aligning the optical 
 *Optoelectronic characterization setup. Optical fiber alignment and electrical probing were combined for bias-dependent measurements.*
 
 The setup used a tunable laser and optical spectrum measurements, with a RIGOL waveform generator for programmed pulses and a Keithley 2400 source measure unit for DC biasing. Device-protection and polymer-removal steps were considered when setting the measurement order.
+
+Related characterization work included passive free-space testing of grating-coupled lithium-niobate structures, documented in my April 30 meeting record. My [microring project](projects/microring-matrix-computing.md) includes original spectra and a photograph of the electrical/optical testbench.
 
 ### Selected measurements
 
@@ -70,19 +72,21 @@ The protocol also covered synchronized electrical/optical hysteresis measurement
 
 ## 2. Graphene heaters for phase-change photonics
 
-I also worked on graphene-heated phase-change photonic devices, including wet transfer, active testing and electrode-layout redesign. The engineering question was how contact resistance and patterned graphene geometry distribute electrical power relative to the phase-change region. The expanded project page documents contact-overlap and taper geometry, approximate resistance budgets, thermal-model scenarios and subsequent group measurements of a C-shaped contact revision.
+I also worked on graphene-heated phase-change photonic devices, including wet transfer, active testing and electrode-layout redesign. The project page now includes my transfer-process photographs and 1 V electrode-screening record, alongside contact/taper geometry, resistance and power models, and subsequent group measurements of a C-shaped revision.
 
 [Project details: material transfer, electrical checks and heater-layout considerations](projects/graphene-pcm-heaters.md)
 
 ## 3. Microring arrays and matrix computation
 
-I worked on matrix–vector multiplication experiments using silicon microring arrays, connecting CNN-kernel-to-matrix mapping with transmission-spectrum and optical-output-power measurements. This provided experience translating a computational operation into an optical-device experiment.
+I worked on matrix–vector multiplication experiments using silicon microring arrays, connecting CNN-kernel-to-matrix mapping with transmission-spectrum and optical-output-power measurements. My meeting records document a nine-ring CNN-related experimental platform and multi-ring thermal-tuning measurements using a 0–4 V heater scan in 0.5 V steps.
 
 [Project details: matrix mapping and optical measurements](projects/microring-matrix-computing.md)
 
 ## 4. Exploratory magneto-optic modulator design
 
-I assessed ferromagnetic / ferroelectric material combinations and explored integrated magneto-optic modulator structures through design and simulation. One candidate direction combined Fe₃GeTe₂ with α-In₂Se₃ to investigate electrically controlled magneto-optic behaviour. Material integration, optical loss and structural complexity remained central feasibility questions in this exploratory study.
+I assessed ferromagnetic / ferroelectric material combinations and developed a proposed FGT/α-In₂Se₃/hBN/graphene stack on a SiN microring. The study compared gate architectures and developed a dry-transfer assembly plan, with optical absorption, magnetic operating conditions and process complexity as central feasibility questions.
+
+[Project details: proposed layer stack, architecture evolution and integration planning](projects/magneto-optic-concepts.md)
 
 ## Experimental experience
 

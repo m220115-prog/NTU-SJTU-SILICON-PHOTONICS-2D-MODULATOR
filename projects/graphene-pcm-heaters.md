@@ -8,6 +8,33 @@ This collaborative SJTU project investigated graphene heaters for electrically a
 
 The design objective was to concentrate useful electrical dissipation near the phase-change region while maintaining graphene continuity, reliable metal contacts and usable optical transmission. The design evolution below also draws on subsequent SJTU group-review notes from July 2026; those calculations and follow-up measurements are identified by stage.
 
+## Graphene wet-transfer workflow
+
+My May meeting records document the experimental transfer sequence used to place graphene onto photonic chips:
+
+1. Prepare the graphene/Cu foil and apply a polymer support, followed by baking.
+2. Remove unwanted backside graphene and etch away the Cu support.
+3. Rinse the floating supported film.
+4. Retrieve it onto the target chip and inspect the transferred region.
+
+![Experimental photographs of graphene wet transfer](../figures/graphene-wet-transfer.svg)
+
+*Selected original photographs from the May 15 meeting file: supported-foil preparation, the Cu-etch stage and transfer onto a patterned chip.*
+
+## My electrode-screening record
+
+The July 17 meeting record contains a position-resolved graphene-electrode test log measured at **1 V with a 200 μA current compliance**. I recorded device location, status and current to identify opens, shorts and weak current paths.
+
+| Screening metric | Summary reported in my July 17 record |
+| --- | --- |
+| Total devices in the slide summary | 40 |
+| Devices recorded as conductive | 18 (45%) |
+| Entries with current ≥100 μA | 6 (15% of the stated total) |
+| Maximum listed current | 170 μA at 1 V |
+| Current compliance | 200 μA |
+
+These metrics describe electrode screening. The location log contains separate status flags and current readings; the counts above reproduce the meeting-slide summary.
+
 ## Initial layout and electrical diagnosis
 
 The current path comprised metal/graphene overlap regions, tapered graphene access regions and a narrow central heater. A representative low-bias check gave approximately **60 μA at 1 V**, corresponding to a total resistance of approximately **16.7 kΩ** and an electrical input power of approximately **60 μW**.
