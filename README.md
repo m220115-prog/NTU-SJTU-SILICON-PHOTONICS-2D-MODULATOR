@@ -70,7 +70,7 @@ The protocol also covered synchronized electrical/optical hysteresis measurement
 
 ## 2. Graphene heaters for phase-change photonics
 
-I also worked on graphene-heated phase-change photonic devices, including wet transfer, active testing and electrode-layout redesign. The engineering question was how contact resistance and patterned graphene geometry distribute electrical power relative to the phase-change region. Recurring heater failure motivated closer analysis of the contacts, taper transitions and narrow heating section.
+I also worked on graphene-heated phase-change photonic devices, including wet transfer, active testing and electrode-layout redesign. The engineering question was how contact resistance and patterned graphene geometry distribute electrical power relative to the phase-change region. The expanded project page documents contact-overlap and taper geometry, approximate resistance budgets, thermal-model scenarios and subsequent group measurements of a C-shaped contact revision.
 
 [Project details: material transfer, electrical checks and heater-layout considerations](projects/graphene-pcm-heaters.md)
 

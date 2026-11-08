@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" role="img" aria-labelledby="title desc">
+  <title id="title">Proposed graphene heater and three-edge contact geometry</title>
+  <desc id="desc">A July 2026 design proposal uses graphene overlap on three edges of each gold contact, tapered graphene access regions, and a narrow central heater. Red arrows illustrate possible current routes at the left contact. Dimensions are design values, and the schematic is not to scale.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#b94134"/></marker>
+    <marker id="dimension" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto-start-reverse"><path d="M6 0L0 3L6 6" fill="none" stroke="#475569"/></marker>
+  </defs>
+  <rect width="1100" height="520" fill="white"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#17243a">
+    <text x="42" y="42" font-size="24" font-weight="700">Graphene heater: contact and taper redesign</text>
+    <text x="42" y="70" font-size="16" fill="#58677a">July 17 proposal · conceptual top view · not to scale</text>
+    <rect x="100" y="135" width="230" height="230" rx="2" fill="#f0c65b" stroke="#a88632" stroke-width="1.5"/>
+    <rect x="770" y="135" width="230" height="230" rx="2" fill="#f0c65b" stroke="#a88632" stroke-width="1.5"/>
+    <path d="M330 135L525 228L525 272L330 365Z" fill="#c6ccd4"/>
+    <path d="M770 135L575 228L575 272L770 365Z" fill="#c6ccd4"/>
+    <rect x="525" y="228" width="50" height="44" fill="#718096" stroke="#4a596d" stroke-width="1.5"/>
+    <path d="M100 135H330V365H100V334H299V166H100Z" fill="#9d893b"/>
+    <path d="M1000 135H770V365H1000V334H801V166H1000Z" fill="#9d893b"/>
+    <path d="M146 150H314V207" fill="none" stroke="#b94134" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M146 250H286" fill="none" stroke="#b94134" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M146 350H314V293" fill="none" stroke="#b94134" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="150" y="195" font-size="18">Au contact pad</text>
+    <text x="840" y="250" font-size="18">Au contact pad</text>
+    <path d="M420 111H678" stroke="#b94134" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="492" y="101" font-size="15" fill="#b94134">Current path</text>
+    <text x="390" y="320" font-size="17">Graphene taper</text>
+    <path d="M470 307L472 285" stroke="#475569" stroke-width="1.2" fill="none"/>
+    <text x="596" y="198" font-size="17">Central heater</text>
+    <text x="596" y="220" font-size="15" fill="#58677a">proposed 3 µm × 3 µm</text>
+    <path d="M590 214L569 236" stroke="#475569" stroke-width="1.2" fill="none"/>
+    <path d="M100 387H330" stroke="#475569" stroke-width="1.1" marker-start="url(#dimension)" marker-end="url(#dimension)"/>
+    <text x="171" y="411" font-size="15">200 µm pad</text>
+    <text x="95" y="115" font-size="15" fill="#58677a">30 µm overlap strip</text>
+    <path d="M251 117L265 143" stroke="#475569" stroke-width="1.1"/>
+    <rect x="100" y="445" width="18" height="18" fill="#f0c65b" stroke="#a88632"/>
+    <text x="127" y="460" font-size="15">Au metal</text>
+    <rect x="292" y="445" width="18" height="18" fill="#c6ccd4"/>
+    <text x="319" y="460" font-size="15">Graphene access region</text>
+    <rect x="592" y="445" width="18" height="18" fill="#9d893b"/>
+    <text x="619" y="460" font-size="15">Graphene / Au overlap</text>
+    <text x="100" y="493" font-size="14" fill="#58677a">Red arrows illustrate the upper, middle and lower current routes considered in the contact model.</text>
+  </g>
+</svg>
