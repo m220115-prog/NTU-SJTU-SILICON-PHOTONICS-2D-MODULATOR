@@ -74,7 +74,7 @@ A uniform-sheet estimate gives a rectangular graphene resistance R = R<sub>s</su
 $$
 R_{\mathrm{taper}}
 =R_{\mathrm{s}}\frac{L}{W_{\mathrm{wide}}-W_{\mathrm{narrow}}}
-\ln\!\left(\frac{W_{\mathrm{wide}}}{W_{\mathrm{narrow}}}\right).
+\ln\left(\frac{W_{\mathrm{wide}}}{W_{\mathrm{narrow}}}\right).
 $$
 
 The July 17 calculations estimated approximately 0.78 kΩ for the revised graphene channel and tapers, compared with approximately 1.5 kΩ in the earlier estimate. A total device resistance of **2–3 kΩ** was a design target conditional on improving the contacts and transfer process.
