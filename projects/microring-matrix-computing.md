@@ -2,6 +2,8 @@
 
 [Back to SJTU research overview](../README.md)
 
+**Stage: experimental characterization and computing-related work**
+
 ## Project and contribution
 
 During my SJTU exchange, I worked on matrix–vector multiplication (MVM) experiments using silicon microring-resonator arrays. My activities connected CNN-kernel-to-matrix mapping with transmission-spectrum measurements and optical-output-power characterization.

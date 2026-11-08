@@ -2,6 +2,8 @@
 
 [Back to SJTU research overview](../README.md)
 
+**Stage: fabrication, testing and design investigation**
+
 ## Project and contribution
 
 This collaborative SJTU project investigated graphene heaters for electrically addressing Sb–Se phase-change material on photonic waveguides. My exchange contribution included graphene wet transfer, active electrical/optical testing and work on electrode-layout redesign following heater failure.
